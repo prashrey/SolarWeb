@@ -1,0 +1,33 @@
+$white:                                 #ffffff;
+
+$black:                                 #020202;
+$black-translucent:                     #020202bf;
+
+$blue-light:                            #009ffd;
+$blue-translucent:                      #009ffdbf;
+
+$blue:                                  #2a2a72;
+$blue-translucent:                      #2a2a72bf;
+
+$red:                                   #f42e3b;
+$red-translucent:                       #f42e3bbf;
+
+$green:                                 #7fc637;
+$green-translucent:                     #7fc637bf;
+
+$font-weight-light:                     300;
+$font-weight-normal:                    400;
+$font-weight-semi-bold:                 600;
+$font-weight-bold:                      700;
+
+$font-family-Maven:                     'Maven Pro', sans-serif;
+$font-size-base:                        0.625rem;
+
+$font-family-default:                   $font-family-Maven;
+
+$h1-font-size:                          $font-size-base*50;
+$h2-font-size:                          $font-size-base*36;
+$h3-font-size:                          $font-size-base*20;
+$h4-font-size:                          $font-size-base*16;
+$h5-font-size:                          $font-size-base*12;
+$h6-font-size:                          $font-size-base*10;
