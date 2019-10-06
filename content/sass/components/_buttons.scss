@@ -1,0 +1,8 @@
+.btn-primary{
+    color: $btn-primary-color;
+    background-color: $btn-primary-bg;
+
+    &:hover{
+        background-color: $btn-primary-bg-hover;
+    }
+}
