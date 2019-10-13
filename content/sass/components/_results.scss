@@ -1,0 +1,20 @@
+.results-panel {
+    overflow-x: scroll;
+    height: 100vh;
+    background: #f2f2f2;
+}
+
+.album-grid {
+    // temporary, this will be dynamically set
+    width: 17575px;
+    height: 100%;
+
+    .album-card {
+        text-align: center;
+        width: 25vw;
+        border: 1px solid;
+        height: 100%;
+        display: inline-block;
+        @extend %text-overflow;
+    }
+}

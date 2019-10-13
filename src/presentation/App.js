@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchWidget from './SearchWidget';
+import SearchWidget from './SearchWidgetV2';
 import ResultPanel from './ResultPanel'
 
 function App() {

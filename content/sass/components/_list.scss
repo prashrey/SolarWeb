@@ -1,0 +1,40 @@
+.suggest-container {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 2px 0 0;
+
+    .suggestion-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        .suggestion {
+            padding: 5px 10px;
+            position: relative;
+            font-size: 14px;
+            cursor: pointer;
+
+            &:hover {
+                background: #eeeeee;
+            }
+        }
+    }
+
+    .suggestion {
+        border-bottom: 1px solid #cccccc55;
+
+        .list-icon {
+            border: 1px solid #ccc;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: 10px;
+            top: 5px;
+            border-radius: 3px;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+%text-overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin respond-to-($screen-type) {
+    @if $screen-type=="below-ipad" {
+        @media screen and (max-width: 767px) {
+            @content;
+        }
+    }
+}

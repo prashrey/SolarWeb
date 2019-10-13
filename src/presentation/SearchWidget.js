@@ -55,6 +55,7 @@ function CategoryIcon(props) {
         >
             <i className={props.iconClass}></i>
             <label className="category-label">{props.label}</label>
+            <div className="highlighter-div"></div>
         </div>
     );
 }

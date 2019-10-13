@@ -13,13 +13,13 @@ export default class SelectDropdown extends React.Component {
     }
     setDropdownValue = (e) => {
         this.props.returnCallback(e.target.textContent);
-        this.setState({ selectedValue: e.target.textContent, displayDropdown: false })   
+        this.setState({ selectedValue: e.target.textContent, displayDropdown: false })
     }
     render() {
         return (
             <div className="dropdown">
                 <input
-                    className="input"
+                    className={this.state.selectedValue ? "input indicator" : "input"}
                     type="text"
                     placeholder="Pick a shade"
                     value={this.state.selectedValue}
@@ -28,7 +28,7 @@ export default class SelectDropdown extends React.Component {
                 />
                 {this.state.displayDropdown &&
                     <div className="suggest-container">
-                        <ul>
+                        <ul className="suggestion-list">
                             {this.props.suggestionList.map((suggestion, i) => {
                                 return (
                                     <li
@@ -37,6 +37,7 @@ export default class SelectDropdown extends React.Component {
                                         onClick={this.setDropdownValue}
                                     >
                                         {suggestion}
+                                        <span className={"list-icon " + suggestion.toLowerCase() + "-bg"}></span>
                                     </li>
                                 )
                             })}
