@@ -15,6 +15,65 @@
         border: 1px solid;
         height: 100%;
         display: inline-block;
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
         @extend %text-overflow;
+    }
+}
+
+.album-card {
+    .album-info {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        padding: 20px 0;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height: 24vw;
+            width: 24vw;
+            border-radius: 50%;
+            background: #fff8;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+    }
+
+    .album-gradient {
+        background-color: #000A;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &:nth-child(odd) {
+        .album-gradient {
+            background-color: #0005;
+        }
+    }
+
+    .album-name {
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 24px;
+        padding: 10px 20px;
+        white-space: pre-wrap;
+        text-shadow: 1px 1px 4px #000;
+    }
+
+    .album-artist {
+        color: #fff;
+        font-weight: 600;
+        text-decoration: underline;
     }
 }

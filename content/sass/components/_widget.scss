@@ -79,9 +79,11 @@
 
     position: absolute;
     width: 100%;
-    background: #3e455180;
+    // background: #3e455180;
     top: 50%;
     transform: translateY(-50%);
+
+    z-index: 10;
 
     .category-wrapper {
         display: flex;
