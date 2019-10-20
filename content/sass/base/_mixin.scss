@@ -10,4 +10,14 @@
             @content;
         }
     }
+    @if $screen-type=="ipad" {
+        @media screen and (min-width:768px) and (max-width: 1024px) {
+            @content;
+        }
+    }
+    @if $screen-type=="mobile" {
+        @media screen and (max-width: 420px) {
+            @content;
+        }
+    }
 }

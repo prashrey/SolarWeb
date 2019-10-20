@@ -6,13 +6,12 @@
 
 .album-grid {
     // temporary, this will be dynamically set
-    width: 17575px;
+    width: 25600px;
     height: 100%;
 
     .album-card {
         text-align: center;
         width: 25vw;
-        border: 1px solid;
         height: 100%;
         display: inline-block;
         position: relative;
@@ -21,6 +20,14 @@
         background-size: cover;
 
         @extend %text-overflow;
+
+        @include respond-to-(ipad){
+            width: 50vw;
+        }
+
+        @include respond-to-(mobile){
+            width: 100vw;
+        }
     }
 }
 
@@ -40,14 +47,25 @@
             height: 24vw;
             width: 24vw;
             border-radius: 50%;
-            background: #fff8;
+            background: #000A;
+            box-shadow: 0px 0px 5px #000A;
             transform: translate(-50%, -50%);
             z-index: -1;
+
+            @include respond-to-(ipad){
+                height: 45vw;
+                width: 45vw;
+            }
+    
+            @include respond-to-(mobile){
+                height: 75vw;
+                width: 75vw;
+            }
         }
     }
 
     .album-gradient {
-        background-color: #000A;
+        // background-color: #000A;
         height: 100%;
         width: 100%;
         position: absolute;
