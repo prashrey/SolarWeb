@@ -3,13 +3,15 @@ import SelectDropdown from '../common/SelectDropdown';
 import Button from '../common/Button';
 
 const userOptions = [
-    'Red',
-    'Green',
-    'Blue',
-    'Orange',
-    'Yellow',
-    'Black',
     'White',
+    'Violet',
+    'Indigo',
+    'Blue',
+    'Green',
+    'Yellow',
+    'Orange',
+    'Red',
+    'Black',
 ];
 
 export default class SearchWidget extends React.Component {
@@ -17,11 +19,10 @@ export default class SearchWidget extends React.Component {
         super(props);
         this.state = {
             inputSelected: false,
-            inputSelectedValue: ''
         }
     }
-    updateSelectedValue = (selectedValue) => {
-        this.setState({ inputSelectedValue: selectedValue })
+    updateSelectedValue = (e) => {
+        this.props.updateSearchTitle(e.target.value)
     }
     hideWidget = () => {
         this.setState({ inputSelected: true })
@@ -37,7 +38,7 @@ export default class SearchWidget extends React.Component {
                     <label className="category-label col-xs-12">Album <br />Finder</label>
                 </div>
                 <div className="col-md-5 input-wrapper">
-                    <SelectDropdown suggestionList={userOptions} returnCallback={this.updateSelectedValue} />
+                    <input type="text" onChange={this.updateSelectedValue.bind(this)} placeholder="Enter title of an album" />
                     <Button class="button button-primary" clickEvent={this.hideWidget} disabled={false}>Find me an Album </Button>
                 </div>
             </section >

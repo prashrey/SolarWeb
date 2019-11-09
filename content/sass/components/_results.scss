@@ -6,7 +6,8 @@
 
 .album-grid {
     // temporary, this will be dynamically set
-    width: 25600px;
+    // need to find another solution for old browsers
+    width: max-content;
     height: 100%;
 
     .album-card {
