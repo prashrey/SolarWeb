@@ -7,11 +7,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputValue: ''
+      inputValue: '',
+      inputSelected: false
     }
   }
   updateSearchTitle = (title) => {
-    this.setState({ inputValue: title })
+    this.setState({ inputValue: title, inputSelected: true })
   }
   render() {
     return (
@@ -19,6 +20,7 @@ class App extends React.Component {
         {/* <Header /> */}
         <SearchWidget
           updateSearchTitle={this.updateSearchTitle}
+          inputSelected={this.state.inputSelected}
         />
         <ResultPanel
           arrAlbum={response.results.albummatches}

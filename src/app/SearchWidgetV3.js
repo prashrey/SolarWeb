@@ -18,18 +18,18 @@ export default class SearchWidget extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            inputSelected: false,
+            inputValue: '',
         }
     }
     updateSelectedValue = (e) => {
-        this.props.updateSearchTitle(e.target.value)
+        this.setState({ inputValue: e.target.value })
     }
     hideWidget = () => {
-        this.setState({ inputSelected: true })
+        this.props.updateSearchTitle(this.state.inputValue);
     }
     render() {
         return (
-            <section className={"row search-widget " + (this.state.inputSelected ? "d-none" : "")}>
+            <section className={"row search-widget " + (this.props.inputSelected ? "sticky" : "")}>
                 <div className="col-md-7 category-wrapper">
                     <div className="category">
                         <i className="fas fa-music"></i>
